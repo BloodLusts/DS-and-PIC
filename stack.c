@@ -10,7 +10,7 @@ int stack[5];
 
 void push() {
   int x;
-  printf("Enter the data to insert:");
+  printf("Enter the data to be inserted:");
   scanf("%d", &x);
   if (top == n - 1) {
     printf("\nStack is full!\n");
