@@ -5,18 +5,21 @@ int top=-1;
 int n=5;
 int stack[5];
 
-void look(int top,int *stack){
-    if(top==-1){
-    printf("Stack is empty");
-    printf("\n");
-    return;
+void look(int top,int *stack)
+{
+    if(top==-1)
+    {
+        printf("Stack is empty");
+        printf("\n");
+        return;
     }
     else
     {
-    printf("Stack after operation:\n");
-    for(int i=0;i<=top;i++){
-        printf("[%d] ",stack[i]);
-    }
+        printf("Stack after operation:\n");
+        for(int i=0;i<=top;i++)
+        {
+            printf("[%d] ",stack[i]);
+        }
     }
     printf("\n");
 }
@@ -33,9 +36,9 @@ void push()
     }
     else
     {
-    top++;
-    stack[top] = x;
-    look(top,stack);
+        top++;
+        stack[top] = x;
+        look(top,stack);
     }
     stop();
 }
@@ -43,9 +46,10 @@ void push()
 void pop()
 {
     int poped;
-    if(top==-1){
-    printf("Stack is empty");
-    return;
+    if(top==-1)
+    {
+        printf("Stack is empty");
+        return;
     }
     else
     {
@@ -67,8 +71,8 @@ void display()
     }
     else
     {
-    look(top,stack);
-    stop();
+        look(top,stack);
+        stop();
     }
 }
 
@@ -86,33 +90,35 @@ void peak()
     }
     stop();
 }
-void stop(){
+
+void stop()
+{
     int choice;
     do
     {
-    printf("\nSelect the operation\n");
-    printf("1]push operation\n2]pop operation\n3]display\n4]peak\n");
-    printf("Enter the choice: ");
-    scanf("%d",&choice);
-    switch(choice)
-    {
-        case 1:
-            push();
-            break;
-        case 2:
-            pop();
-            break;
-        case 3:
-            display();
-            break;
-        case 4:
-            peak();
-            break;
-        default:
-            printf("\nInvalid selection:");
-            break;
-    } 
-    }while(choice != 5);
+        printf("\nSelect the operation\n");
+        printf("1]push operation\n2]pop operation\n3]   display\n4]peak\n");
+        printf("Enter the choice: ");
+        scanf("%d",&choice);
+        switch(choice)
+        {
+            case 1:
+                push();
+                break;
+            case 2:
+                pop();
+                break;
+            case 3:
+                display();
+                break;
+            case 4:
+               peak();
+                break;
+            default:
+                printf("\nInvalid selection:");
+                break;
+        } 
+    }   while(choice != 5);
 }
 
 
