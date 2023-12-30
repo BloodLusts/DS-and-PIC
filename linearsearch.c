@@ -17,7 +17,7 @@ int main(){
         if(target==arr[i]){
             flag=1;
             loc=i+1;
-
+//nothing
         }
     }
     if(flag){
